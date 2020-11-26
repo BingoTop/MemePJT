@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="style.css" />  
   </head>
   <body>
- <header>MEMEBOT</header>
+    <header>MEMEBOT</header>
+    <div class="complete hide">
+      <i class="far fa-check-circle"></i>
+      <p>Copy Completed</p>
+    </div>
     <form class="search-form">
       <input type="text" name="" id="" placeholder="검색어를 입력해주세요..." />
       <button id="search" type="submit"><i class="fas fa-search"></i></button>
     </form>
     <div class="search-result">
     </div>
+    <div class="popup-container" id="container">
+      <div class="popup">
+        <button id="close">x</button>
+        <h3 class="popUpTitle">이 움짤이 마음에 드신가요?</h3>
+      </div>
+    </div>
   </body>
 </html>
+

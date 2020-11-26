@@ -55,6 +55,116 @@ header {
   cursor: pointer;
   width: 100%;
   margin: 0 auto 1rem auto;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Popup */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.popup {
+  background-color: white;
+  width: 500px;
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.popup > button#close {
+  position: absolute;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.popUpTitle {
+  padding-bottom: 20px;
+  font-weight: 900;
+}
+
+.popup input {
+  min-height: 25px;
+  width: 80%;
+  font-size: 15px;
+}
+.popup .copy {
+  background-color: white;
+  color: black;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.copy-active {
+  background-color: black;
+  color: white;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.complete {
+  font-weight: 1000;
+  font-size: 1.5rem;
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 0px;
+  background-color: white;
+  min-width: 400px;
+  min-height: 50px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-around;
+  border-left: 8px solid silver;
+}
+
+.complete > i {
+  font-weight: 1000;
+  background-color: white;
+  color: black;
+}
+
+.complete.show {
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.hide {
+  display: none;
 }

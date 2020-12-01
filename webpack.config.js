@@ -6,6 +6,9 @@ module.exports = {
         "path":__dirname+"/dist",
         "filename":"bundle.js"
     },
+    resolve:{
+        fallback: {"path":false}
+    },
     devServer:{
         contentBase: path.join(__dirname,"dist")
     },

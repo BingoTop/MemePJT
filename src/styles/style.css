@@ -101,11 +101,20 @@ header {
   font-weight: 900;
 }
 
-.popup input {
-  min-height: 25px;
-  width: 80%;
+.url-copy input {
   font-size: 15px;
 }
+.popup .copy-input {
+  width: 80%;
+}
+input[type="checkbox"] {
+  width: 20px; /*Desired width*/
+
+  height: 25px; /*Desired height*/
+
+  cursor: pointer;
+}
+
 .popup .copy {
   background-color: white;
   color: black;
@@ -115,56 +124,36 @@ header {
   padding-left: 5px;
   cursor: pointer;
 }
-.copy-active {
-  background-color: black;
-  color: white;
-  border: 0;
-  outline: 0;
-  font-size: 20px;
-  padding-left: 5px;
-  cursor: pointer;
+
+.url-copy input:checked {
+  animation: jelly 0.6s ease;
 }
 
-.complete {
-  font-weight: 1000;
-  font-size: 1.5rem;
-  position: absolute;
+.url-copy {
   display: flex;
-  top: 10px;
-  right: 0px;
-  background-color: white;
-  min-width: 400px;
-  min-height: 50px;
-  border-radius: 4px;
   align-items: center;
-  justify-content: space-around;
-  border-left: 8px solid silver;
+  justify-content: center;
 }
-
-.complete > i {
-  font-weight: 1000;
-  background-color: white;
-  color: black;
-}
-
-.complete.show {
-  animation: show_slide 1s ease forwards;
-}
-@keyframes show_slide {
-  0% {
-    transform: translateX(100%);
+@keyframes jelly {
+  from {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
   }
   40% {
-    transform: translateX(-10%);
+    transform: scale(0.75, 1.25);
   }
-  80% {
-    transform: translateX(0%);
+  50% {
+    transform: scale(1.15, 0.85);
   }
-  100% {
-    transform: translateX(-10px);
+  65% {
+    transform: scale(0.95, 1.05);
   }
-}
-
-.hide {
-  display: none;
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1, 1);
+  }
 }
